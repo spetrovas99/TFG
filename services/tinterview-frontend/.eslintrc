@@ -1,0 +1,11 @@
+{
+    "extends": "./node_modules/@coverwallet/cw-javascript-coding-standards/frontend/eslintrc",
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      }
+}
