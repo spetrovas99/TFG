@@ -1,0 +1,43 @@
+version: 2.1
+
+orbs:
+  cwsre: coverwallet/deployment@1.1.1
+
+jobs:
+  build:
+    executor: cwsre/sre-docker
+    steps:
+      - cwsre/create_deploy_service:
+          action: create
+          company: sre
+          country: us
+          bv: cw
+  deploy:
+    executor: cwsre/sre-docker
+    steps:
+      - cwsre/create_deploy_service:
+          action: deploy
+          company: sre
+          country: us
+          bv: cw
+
+workflows:
+  version: 2
+  tinterview:
+    jobs:
+      - build:
+          context: k8s
+          filters:
+            branches:
+              only:
+                - beta
+                - production
+      - deploy:
+          context: k8s
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - beta
+                - production
