@@ -1,0 +1,47 @@
+type Query {
+    users:[User!]
+    calendarEvents: [CalendarEvent!]!
+    currentUser: User!
+}
+
+type Mutation {
+    signUp(name: String!, lastname: String!, email: String!, pwd: String, type: String!): User!
+    signIn(email: String!): Session!
+    signOut(email: String!, token:String!): User!
+    googleSignIn(tokenId: String!): String
+    sendEmailPwd(email: String!): String
+    resetPwd(pwd: String!, url: String!): String
+}
+
+type User {
+    _id: ID!
+    name: String
+    lastname: String
+    googleId: String
+    accessToken: String
+    refreshToken: String
+    email: String!
+    pwd: String
+    token: ID
+    type: String
+    departament: String
+    position: String
+    seniority: String
+}
+type CalendarEvent{
+    id: String!
+    start: EventDate!
+    end: EventDate!
+}
+type EventDate{
+    dateTime: String!
+    timeZone: String!
+}
+type Session {
+  token: String!
+}
+type GoogleCredentials{
+    client_id: String!
+    client_secret: String!
+    redirect_uris: String!
+}
