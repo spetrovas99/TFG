@@ -1,3 +1,0 @@
-{
-    "extends": "./node_modules/@coverwallet/cw-javascript-coding-standards/base/eslintrc"
-}
