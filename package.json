@@ -1,0 +1,56 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "author": "stefani",
+  "license": "ISC",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "dependencies": {
+    "@apollo/client": "^3.3.7",
+    "@coverwallet/cw-node-application-mode": "^2.4.0",
+    "@coverwallet/cw-node-sso": "^5.2.3",
+    "@coverwallet/cw-node-system-insights": "^1.1.1",
+    "@coverwallet/node-rocket-science": "^5.4.1",
+    "@emotion/react": "^11.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "googleapis": "^39.2.0",
+    "graphql-hooks": "^5.0.0",
+    "isemail": "^3.2.0",
+    "mongoose": "^5.11.13",
+    "react": "^17.0.1",
+    "typescript": "4.0.5",
+    "window": "^4.2.7"
+  },
+  "scripts": {
+    "tsc:backend": "cd backend && tsc --p ./tsconfig.json",
+    "tsc:frontend": "cd frontend && tsc --p ./tsconfig.json",
+    "tsc": "npm run tsc:backend && npm run tsc:frontend"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.12.7",
+    "@coverwallet/cw-javascript-coding-standards": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.5",
+    "@typescript-eslint/parser": "^4.0.5",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "eslint-plugin-security": "^1.4.0",
+    "prettier": "^1.13.7"
+  }
+}
